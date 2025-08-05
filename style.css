@@ -153,9 +153,9 @@ footer {
     justify-content: flex-start;
   }
   .contact-bar .btn {
-    font-size: 1rem;
-    padding: 0.65rem 0.7rem !important;
-    margin: 0.07rem auto !important;
+    font-size: 0.9rem;
+    padding: 0.46rem 0.55rem !important;
+    margin: 0.05rem auto !important;
     border-radius: 8px !important;
   }
   .hero-content { padding: 0.8rem 0.3rem !important; }
