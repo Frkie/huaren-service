@@ -1,46 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>华人服务中心</title>
+  <title>华人服务中心 / Chinese Service Center</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button id="lang-toggle" class="lang-btn">中/英</button>
   <header class="hero">
     <div class="hero-content">
-      <h1>华人服务中心</h1>
-      <p>为华人提供签证、绿卡、执照等高效服务</p>
-      <a href="weixin://dl/chat?Asainservice666" class="btn">微信联系：Asainservice666</a>
+      <h1 data-en="Chinese Service Center">华人服务中心</h1>
+      <p data-en="Professional services for Chinese immigrants: Visa, Green Card, Business License and more.">
+        为华人提供签证、绿卡、执照等高效服务
+      </p>
+      <div class="contact-bar">
+        <span class="btn" data-en="💬 WeChat: Asainservice666">💬 微信联系：Asainservice666</span>
+        <span class="btn">
+          <a href="https://www.google.com/maps?q=223E+Garvey+Ave+Ste+148,+Monterey+Park,+CA,+91755" target="_blank"
+            data-en="📍 Address: 223E Garvey Ave Ste 148, Monterey Park, CA, 91755">
+            📍 地址：223E Garvey Ave Ste 148, Monterey Park, CA, 91755
+          </a>
+        </span>
+        <span class="btn" data-en="📞 Tel: 626-866-3328">📞 电话：626-866-3328</span>
+        <img src="assets/wechat-qr.jpg" alt="微信二维码" class="qr-img">
+      </div>
     </div>
   </header>
 
-  <section class="services">
-    <h2>我们的服务</h2>
+  <!-- 首页 -->
+  <section class="services" id="main-page">
+    <h2 data-en="Our Services">我们的服务</h2>
     <div class="cards">
-      <div class="card"><h3>📝 公证翻译</h3><p>提供各类文件的专业公证及翻译服务。</p></div>
-      <div class="card"><h3>🌐 海牙认证</h3><p>国际文件认证处理，快速可靠。</p></div>
-      <div class="card"><h3>🛂 护照</h3><p>协助申请与续签护照，流程明确。</p></div>
-      <div class="card"><h3>✈️ 签证</h3><p>旅游、探亲、商务签证办理。</p></div>
-      <div class="card"><h3>🚔 罚单处理</h3><p>协助处理交通罚单及申诉流程。</p></div>
-      <div class="card"><h3>🗽 公民入籍豁免</h3><p>协助申请英语或考试豁免资格。</p></div>
-      <div class="card"><h3>👨‍👩‍👧‍👦 亲属移民</h3><p>家庭团聚，亲属担保申请指导。</p></div>
-      <div class="card"><h3>💼 职业移民</h3><p>基于雇佣或技术的移民方案。</p></div>
-      <div class="card"><h3>🎓 学生身份</h3><p>F1、OPT、CPT等学生身份服务。</p></div>
-      <div class="card"><h3>💳 快速绿卡</h3><p>优先类别移民快速通道指导。</p></div>
-      <div class="card"><h3>🚀 移民办理</h3><p>全流程移民咨询与材料准备。</p></div>
-      <div class="card"><h3>🛠️ 工卡申请</h3><p>协助申请工作许可卡(EAD)。</p></div>
-      <div class="card"><h3>🏥 白卡</h3><p>Medicaid相关申请与协助。</p></div>
-      <div class="card"><h3>👴 退休福利</h3><p>协助了解及申请社会福利政策。</p></div>
-      <div class="card"><h3>🏥 加州健保</h3><p>Covered CA健康保险计划服务。</p></div>
-      <div class="card"><h3>🚗 汽车保险</h3><p>提供华人常用汽车保险方案。</p></div>
+      <div class="card" data-key="notarization"><h3 data-en="📝 Notarization & Translation">📝 公证翻译</h3><p data-en="Professional notarization and translation of all documents.">提供各类文件的专业公证及翻译服务。</p></div>
+      <div class="card" data-key="hague"><h3 data-en="🌐 Hague Apostille">🌐 海牙认证</h3><p data-en="International document certification, fast and reliable.">国际文件认证处理，快速可靠。</p></div>
+      <div class="card" data-key="passport"><h3 data-en="🛂 Passport">🛂 护照</h3><p data-en="Assistance with passport application and renewal.">协助申请与续签护照，流程明确。</p></div>
+      <div class="card" data-key="visa"><h3 data-en="✈️ Visa">✈️ 签证</h3><p data-en="Tourist, family visit, business visa processing.">旅游、探亲、商务签证办理。</p></div>
+      <div class="card" data-key="ticket"><h3 data-en="🚔 Ticket Handling">🚔 罚单处理</h3><p data-en="Assistance with traffic ticket processing and appeal.">协助处理交通罚单及申诉流程。</p></div>
+      <div class="card" data-key="citizenship"><h3 data-en="🗽 Citizenship Exemption">🗽 公民入籍豁免</h3><p data-en="Application for English or test exemptions.">协助申请英语或考试豁免资格。</p></div>
+      <div class="card" data-key="family"><h3 data-en="👨‍👩‍👧‍👦 Family Immigration">👨‍👩‍👧‍👦 亲属移民</h3><p data-en="Family reunion and sponsorship application guidance.">家庭团聚，亲属担保申请指导。</p></div>
+      <div class="card" data-key="employment"><h3 data-en="💼 Employment Immigration">💼 职业移民</h3><p data-en="Employment or skill-based immigration solutions.">基于雇佣或技术的移民方案。</p></div>
+      <div class="card" data-key="student"><h3 data-en="🎓 Student Status">🎓 学生身份</h3><p data-en="F1, OPT, CPT and other student services.">F1、OPT、CPT等学生身份服务。</p></div>
+      <div class="card" data-key="fastgreencard"><h3 data-en="💳 Fast Green Card">💳 快速绿卡</h3><p data-en="Priority green card application guidance.">优先类别移民快速通道指导。</p></div>
+      <div class="card" data-key="immigration"><h3 data-en="🚀 Immigration Service">🚀 移民办理</h3><p data-en="Full-process immigration consulting and documentation.">全流程移民咨询与材料准备。</p></div>
+      <div class="card" data-key="ead"><h3 data-en="🛠️ Work Permit (EAD)">🛠️ 工卡申请</h3><p data-en="Apply for employment authorization (EAD).">协助申请工作许可卡(EAD)。</p></div>
+      <div class="card" data-key="medi-cal"><h3 data-en="🏥 Medi-Cal">🏥 白卡</h3><p data-en="Assistance with Medicaid (Medi-Cal) application.">Medicaid相关申请与协助。</p></div>
+      <div class="card" data-key="retirement"><h3 data-en="👴 Retirement Benefits">👴 退休福利</h3><p data-en="Social security and retirement benefits consulting.">协助了解及申请社会福利政策。</p></div>
+      <div class="card" data-key="coveredca"><h3 data-en="🏥 Covered CA">🏥 加州健保</h3><p data-en="California health insurance plan services.">Covered CA健康保险计划服务。</p></div>
+      <div class="card" data-key="autoinsurance"><h3 data-en="🚗 Auto Insurance">🚗 汽车保险</h3><p data-en="Auto insurance for the Chinese community.">提供华人常用汽车保险方案。</p></div>
     </div>
   </section>
 
+  <!-- 业务详情页 -->
+  <section id="detail-page" style="display:none; padding:3rem 1.5rem 2rem 1.5rem; max-width:800px; margin:auto;">
+    <button class="btn" id="back-home" style="margin-bottom:2rem;" data-en="← Back to Services">← 返回首页</button>
+    <h2 id="detail-title"></h2>
+    <div id="detail-desc" style="font-size:1.1rem;line-height:1.9;"></div>
+  </section>
+
   <footer>
-    <p>© 2025 华人服务中心 · 微信号: Asainservice666</p>
-    <p>联系电话：626-866-3328</p>
-    <p>地址：223E Garvey Ave Ste 148, Monterey Park, CA, 91755</p>
+    <p data-en="© 2025 Chinese Service Center · WeChat: Asainservice666">© 2025 华人服务中心 · 微信号: Asainservice666</p>
+    <p data-en="Tel: 626-866-3328">联系电话：626-866-3328</p>
+    <p data-en="Address: 223E Garvey Ave Ste 148, Monterey Park, CA, 91755">地址：223E Garvey Ave Ste 148, Monterey Park, CA, 91755</p>
   </footer>
+
+  <script>
+    // ---- SPA业务详情内容（你可增改每项内容，key要和卡片的data-key一致）
+    const detailContents = {
+      notarization: {
+        zh: "公证翻译服务包括：出生、学历、结婚、离婚、驾驶证、护照、委托书等所有中英文文书的公证与专业翻译。我们为出国、移民、升学、就业等提供官方认可的翻译及公证材料，文件严谨规范，全程协助，快速交付。",
+        en: "Our notarization and translation service covers birth certificates, diplomas, marriage/divorce certificates, driver’s licenses, passports, power of attorney and all types of Chinese/English documents. Official certified translation and notarization are provided for overseas study, immigration, work, etc. We ensure accuracy, compliance, and fast turnaround."
+      },
+      hague: {
+        zh: "海牙认证（Apostille）专为海外使用中国/美国等官方文件（如出生证明、学历、无犯罪、委托书等）而设，快速递交，手续合规。我们熟悉中美各地海牙公证流程，为您提供全流程咨询和材料办理。",
+        en: "The Hague Apostille is for official document authentication for international use (birth certificate, diploma, no-criminal record, power of attorney, etc). We assist with the entire process in China/US, offering consultation and paperwork for fast, compliant apostille."
+      },
+      passport: {
+        zh: "护照服务：新办、换发、遗失补办、延期及加页等全流程协助。包括美国护照、中国护照及港澳台通行证。专业材料准备、预约指导，确保顺利拿证。",
+        en: "Passport services: new passport, renewal, lost passport replacement, extension, and adding pages. We support US, China, Hong Kong & Macau travel documents. We help with material preparation, online appointment and ensure you get your passport smoothly."
+      },
+      visa: {
+        zh: "签证服务覆盖：美国、加拿大、申根、日本、新加坡等旅游/探亲/商务签证及延期、换签。个案评估、材料审核、全程填表、面试辅导，显著提升过签率。",
+        en: "Visa services include tourist/family/business visas and renewals for the US, Canada, Schengen, Japan, Singapore, etc. We offer individual assessment, document review, form filling, interview coaching to maximize your approval rate."
+      },
+      // 你可参照上面写法补充其它业务，key 要和data-key一致
+      ticket: { zh: "", en: "" },
+      citizenship: { zh: "", en: "" },
+      family: { zh: "", en: "" },
+      employment: { zh: "", en: "" },
+      student: { zh: "", en: "" },
+      fastgreencard: { zh: "", en: "" },
+      immigration: { zh: "", en: "" },
+      ead: { zh: "", en: "" },
+      "medi-cal": { zh: "", en: "" },
+      retirement: { zh: "", en: "" },
+      coveredca: { zh: "", en: "" },
+      autoinsurance: { zh: "", en: "" }
+    };
+
+    // 语言切换逻辑（和主界面一致，多次切换无bug）
+    let zh = true;
+    const btn = document.getElementById('lang-toggle');
+    // 初始化保存所有中文文本到 data-zh
+    document.querySelectorAll('[data-en]').forEach(node => {
+      node.setAttribute('data-zh', node.innerText);
+    });
+    function switchLang() {
+      zh = !zh;
+      btn.textContent = zh ? "中/英" : "En/中";
+      document.querySelectorAll('[data-en]').forEach(node => {
+        node.innerText = zh ? node.getAttribute('data-zh') : node.getAttribute('data-en');
+      });
+      // detail页同步更新
+      if(document.getElementById("detail-page").style.display !== "none") {
+        updateDetail(currentDetailKey);
+      }
+    }
+    btn.onclick = switchLang;
+
+    // SPA主逻辑
+    let currentDetailKey = null;
+    function updateDetail(key) {
+      currentDetailKey = key;
+      const d = detailContents[key] || {zh:"", en:""};
+      // 标题和内容（卡片的h3/desc）
+      const card = document.querySelector('.card[data-key="'+key+'"] h3');
+      const zhTitle = card ? (card.getAttribute('data-zh')||card.innerText) : '';
+      const enTitle = card ? card.getAttribute('data-en') : '';
+      document.getElementById("detail-title").innerText = zh ? zhTitle : enTitle;
+      document.getElementById("detail-title").setAttribute("data-zh", zhTitle);
+      document.getElementById("detail-title").setAttribute("data-en", enTitle);
+      document.getElementById("detail-desc").innerText = zh ? d.zh : d.en;
+      document.getElementById("detail-desc").setAttribute("data-zh", d.zh);
+      document.getElementById("detail-desc").setAttribute("data-en", d.en);
+    }
+
+    document.querySelectorAll('.card[data-key]').forEach(card => {
+      card.style.cursor = "pointer";
+      card.onclick = function() {
+        document.getElementById("main-page").style.display = "none";
+        document.getElementById("detail-page").style.display = "block";
+        updateDetail(this.getAttribute("data-key"));
+      }
+    });
+    document.getElementById("back-home").onclick = function() {
+      document.getElementById("detail-page").style.display = "none";
+      document.getElementById("main-page").style.display = "";
+    };
+  </script>
 </body>
 </html>
