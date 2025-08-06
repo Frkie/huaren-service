@@ -69,24 +69,201 @@
     // ---- SPA业务详情内容（你可增改每项内容，key要和卡片的data-key一致）
     const detailContents = {
       notarization: {
-        zh: "公证翻译服务包括：出生、学历、结婚、离婚、驾驶证、护照、委托书等所有中英文文书的公证与专业翻译。我们为出国、移民、升学、就业等提供官方认可的翻译及公证材料，文件严谨规范，全程协助，快速交付。",
-        en: "Our notarization and translation service covers birth certificates, diplomas, marriage/divorce certificates, driver’s licenses, passports, power of attorney and all types of Chinese/English documents. Official certified translation and notarization are provided for overseas study, immigration, work, etc. We ensure accuracy, compliance, and fast turnaround."
+        zh: `
+    <b>公证翻译服务内容：</b>
+    <ul>
+      <li>出生证明、学历证明、结婚/离婚证、护照、驾照、公司文件、合同、财务报表等各类中英文文档的专业翻译与认证。</li>
+      <li>翻译完成后可由翻译员签字，或由公证员见证签字并出具公证书。</li>
+      <li>支持多语种（中文、英文、法语、德语、阿拉伯语等）。</li>
+      <li>用于移民、留学、法律、法院、银行、工商等官方场合。</li>
+      <li>3-7个工作日内出件，可选电子件或纸质快递。</li>
+    </ul>
+    <b>流程说明：</b>
+    <ol>
+      <li>在线提交翻译需求与文件 → 审核报价 → 确认后安排专业翻译</li>
+      <li>翻译完毕，出具签字件或由公证员公证</li>
+      <li>电子件发送或快递纸质件</li>
+    </ol>
+  `,
+  en: `
+    <b>What We Offer:</b>
+    <ul>
+      <li>Certified translation & notarization for birth certificates, diplomas, marriage/divorce certificates, passports, driver licenses, corporate files, contracts, financial statements, and more.</li>
+      <li>Translations are signed by professional translators, and can be notarized by a notary public upon request.</li>
+      <li>Supports multiple languages: Chinese, English, French, German, Arabic, and more.</li>
+      <li>Valid for immigration, study, legal, court, banking, business and all official purposes.</li>
+      <li>Delivery in 3–7 business days, via email (PDF) or paper mail.</li>
+    </ul>
+    <b>How It Works:</b>
+    <ol>
+      <li>Submit your files online → Receive a quote → Confirm to start translation</li>
+      <li>Upon completion, get signed translation or notary-certified documents</li>
+      <li>Receive PDF via email or paper copy by mail</li>
+    </ol>
+  `
       },
       hague: {
-        zh: "海牙认证（Apostille）专为海外使用中国/美国等官方文件（如出生证明、学历、无犯罪、委托书等）而设，快速递交，手续合规。我们熟悉中美各地海牙公证流程，为您提供全流程咨询和材料办理。",
-        en: "The Hague Apostille is for official document authentication for international use (birth certificate, diploma, no-criminal record, power of attorney, etc). We assist with the entire process in China/US, offering consultation and paperwork for fast, compliant apostille."
-      },
+  zh: `
+    <b>海牙认证（Apostille）服务内容：</b>
+    <ul>
+      <li>为出生证明、学历、无犯罪记录、委托书、法院文件、结婚证、公司/合同/财务文件等官方文件提供海牙认证服务，确保在海牙公约成员国使用有效。</li>
+      <li>简化流程：海牙认证只需州务卿或相关政府机构签章，通常无需额外领事认证步骤，适用大多数国家。</li>
+      <li>覆盖成员国多达 120 多个国家，包括中国、美国、欧盟各国、加拿大、日本、新加坡等。</li>
+      <li>处理时间通常为 3‑7 个工作日，可选择 PDF 或快递文件交付。</li>
+    </ul>
+    <b>办理流程：</b>
+    <ol>
+      <li>提交所需文件（如公证书或翻译件） → 初步审核 → 确认办理</li>
+      <li>送至州务卿处签发 Apostille </li>
+      <li>认证完成后，提供电子件和纸质件的选择</li>
+    </ol>
+    <b>适用场景：</b>
+    <p>适用于您在中国、美国或其他成员国之间使用的文书，特别当目标国是海牙公约签约国时，无需使馆认证流程。中国自 2023 年起正式加入海牙公约，省去额外步骤。</p>
+  `,
+  en: `
+    <b>Hague Apostille Service:</b>
+    <ul>
+      <li>We provide Hague Apostille certification for documents such as birth certificates, diplomas, police records, affidavits, court records, marriage certificates, corporate files, contracts and financial documents to ensure acceptance in Hague Convention countries.</li>
+      <li>Simplified process: Apostille is issued by a state authority (e.g. Secretary of State), eliminating the need for consular legalization in most cases.</li>
+      <li>Applicable in over 120 member countries, including China (since Nov 7, 2023), USA, EU nations, Canada, Japan, Singapore, and more.</li>
+      <li>Processing time 3–7 business days; deliver via PDF or mail.</li>
+    </ul>
+    <b>How It Works:</b>
+    <ol>
+      <li>Submit documents (notarized translation, affidavit, official record) → Review → Confirm service</li>
+      <li>Submit to state authority for Apostille certification</li>
+      <li>Receive certified document via email or express delivery</li>
+    </ol>
+    <b>Best Use Case:</b>
+    <p>Best suited when using documents between countries that are members of the Hague Convention. Since China officially joined the Apostille Convention on Nov 7, 2023, documents issued in USA can be used in China with a valid Apostille, without consular legalization.:contentReference</p>
+  `
+},
+
       passport: {
-        zh: "护照服务：新办、换发、遗失补办、延期及加页等全流程协助。包括美国护照、中国护照及港澳台通行证。专业材料准备、预约指导，确保顺利拿证。",
-        en: "Passport services: new passport, renewal, lost passport replacement, extension, and adding pages. We support US, China, Hong Kong & Macau travel documents. We help with material preparation, online appointment and ensure you get your passport smoothly."
+         zh: `
+    <b>护照服务说明：</b>
+    <ul>
+      <li>协助办理中国护照的新发、换发、补发、加注和延期服务。</li>
+      <li>适用于在美中国公民首次申请或补发护照等情形。</li>
+      <li>处理时间一般为 10–15 个工作日（海外申请），加急情况可更快处理。</li>
+      <li>申请材料通常包括：本人有效护照原件、证件照、填写的申请表格、居住证明等。</li>
+    </ul>
+    <b>办理流程：</b>
+    <ol>
+      <li>通过华人服务中心 提交护照申请并预约指纹采集</li>
+      <li>按预约时间携申请表、照片等材料前往领馆现场采集指纹</li>
+      <li>审核后领取新版护照，处理中可选择邮寄或到馆自取</li>
+    </ol>
+    <b>常见用途：</b>
+    <p>适用于出入境、旅游、留学、探亲、工作及各类官方场合使用的有效身份证明，确保护照信息规范、签证页充足。</p>
+  `,
+  en: `
+    <b>Passport Services:</b>
+    <ul>
+      <li>We provide services for issuing, renewing, replacing, annotating and extending Chinese passports.</li>
+      <li>Applicable to Chinese citizens in the U.S. for first-time application or renewal/replacement.</li>
+      <li>Required documents include the original passport, passport photo, application form, proof of residence, etc.</li>
+    </ul>
+    <b>Application Process:</b>
+    <ol>
+      <li>Submit the application via AsainService Center and schedule fingerprint collection</li>
+      <li>Bring form and documents to the consulate at your appointment to provide fingerprints</li>
+      <li>Receive your new passport after approval; choose between mail delivery or in-person pickup</li>
+    </ol>
+    <b>Use Cases:</b>
+    <p>Suitable for identity verification in travel, studies, family reunions, work, and government services. Ensures your passport details are compliant and clear.</p>
+  `
       },
       visa: {
-        zh: "签证服务覆盖：美国、加拿大、申根、日本、新加坡等旅游/探亲/商务签证及延期、换签。个案评估、材料审核、全程填表、面试辅导，显著提升过签率。",
-        en: "Visa services include tourist/family/business visas and renewals for the US, Canada, Schengen, Japan, Singapore, etc. We offer individual assessment, document review, form filling, interview coaching to maximize your approval rate."
-      },
+  zh: `
+    <b>签证服务说明：</b>
+    <ul>
+      <li>提供赴中国旅游（L）、探亲、商务、工作、学习、访问等类型签证申请协助。</li>
+      <li>我们提供预约服务</li>
+      <li>预约成功后需携带护照、填写确认页、AVAS确认单及支持材料前往中国领事馆提交。</li>
+      <li>注意申请表格填写准确，如填写不当或材料不符，签证可能现场被退回。</li>
+      <li>携带风险材料申请人应提前至少 20 分钟到达领事馆，审核签发通常需数个工作日。</li>
+    </ul>
+    <b>办理流程：</b>
+    <ol>
+      <li>联系我们，填写申请表格。</li>
+      <li>使用申请 ID 在线预约签证递交或面谈</li>
+      <li>预约当天携申请表、护照、确认页、相关证明等材料前往递交</li>
+      <li>签证审核通过后领取签证（部分地区可邮寄或现场取件）</li>
+    </ol>
+    <b>温馨提示：</b>
+    <p>保证申请材料填写真实准确，携带完整支持文件，避免因资料不全或格式问题导致申请被退回或延误:contentReference[oaicite:2]{index=2}。</p>
+  `,
+  en: `
+    <b>Visa Application Services:</b>
+    <ul>
+      <li>Assistance for various types of Chinese visas: tourism (L), family visit, business, work, study, and official visits.</li>
+      <li>We provide the appointment service. </li>
+      <li>Bring your passport, DS‑160 confirmation page, AVAS confirmation and supporting documents to the consulate on your appointment day.</li>
+      <li>Incomplete or incorrect form submissions may be rejected on the spot; accuracy is critical.</li>
+      <li>Please arrive at the consulate ≥20 minutes early. Visa processing can take several business days depending on volume and documents.</li>
+    </ul>
+    <b>Application Workflow:</b>
+    <ol>
+      <li>Contact us for the appointment form. </li>
+      <li>Use the ID to schedule appointment for submission or interview</li>
+      <li>On appointment day, present required documents at the consulate or visa center</li>
+      <li>Receive your visa after processing; pick up in person or use mailing options</li>
+    </ol>
+    <b>Notes:</b>
+    <p>Ensure form accuracy and complete supporting documentation to avoid rejection or delays due to errors or missing information:contentReference[oaicite:3]{index=3}.</p>
+  `
+},
       // 你可参照上面写法补充其它业务，key 要和data-key一致
       ticket: { zh: "", en: "" },
-      citizenship: { zh: "", en: "" },
+      citizenship: {
+  zh: `
+    <b>公民入籍豁免说明：</b>
+    <ul>
+      <li>USCIS 提供符合年龄和长期绿卡持有条件的申请者免除英文语言测试（English Test）。</li>
+      <li>50/20 豁免：50 岁及以上并持绿卡 20 年或以上者，可免英语考试，但仍需通过公民知识测试（可使用母语）。</li>
+      <li>55/15 豁免：55 岁及以上并持绿卡 15 年或以上者，可免英语考试，知识测试也可用母语，题目减少。</li>
+      <li>65/20 特殊考虑：65 岁及以上且持绿卡 20 年，可使用母语完成知识测试，且题目数量减少。</li>
+      <li>因医疗原因（残疾或认知障碍）符合条件者，可提交 Form N‑648 获得英语与知识测试双重豁免。</li>
+    </ul>
+    <b>适用条件：</b>
+    <ul>
+      <li>年龄与绿卡持有年限满足规定（如 50/20，55/15，65/20）</li>
+      <li>因残疾无法完成语言或知识测试的申请者</li>
+    </ul>
+    <b>操作流程：</b>
+    <ol>
+      <li>提交 N‑400 入籍申请</li>
+      <li>在申请中填写符合年龄/残疾豁免的选项</li>
+      <li>若为医疗豁免，附上医师出具的 N‑648 表格</li>
+      <li>参加入籍面试，提交相关文件和证明，由 USCIS 审核</li>
+    </ol>
+    
+  `,
+  en: `
+    <b>Citizenship Test Exemptions & Waivers:</b>
+    <ul>
+      <li>USCIS provides exemptions from the English language test for applicants meeting age and Green Card duration criteria.</li>
+      <li>50/20 exemption: applicants 50+ years old who have held a Green Card for 20+ years are exempt from the English test but must still take the civics test (in their native language).</li>
+      <li>55/15 exemption: applicants 55+ years old with 15+ years as permanent residents are exempt from English test; civics test in native language with reduced questions.</li>
+      <li>65/20 special consideration: applicants 65+ with 20+ years Green Card are eligible for native language civics test and fewer questions.</li>
+      <li>Medical disability waiver: if you have a qualifying disability impairing English/civics test ability, you can submit Form N‑648 to request both exemptions.</li>
+    </ul>
+    <b>Eligibility:</b>
+    <ul>
+      <li>Meet age and permanent resident duration threshold (e.g. 50/20, 55/15, 65/20)</li>
+      <li>Have a disability preventing you from completing language or civics tests</li>
+    </ul>
+    <b>Application Process:</b>
+    <ol>
+      <li>Submit Form N‑400 (Naturalization application)</li>
+      <li>Indicate exemption eligibility in the application</li>
+      <li>If applying for medical exemption, attach completed Form N‑648</li>
+      <li>Attend naturalization interview and submit required documentation; decision by USCIS</li>
+    </ol>
+    
+  `
+},
       family: { zh: "", en: "" },
       employment: { zh: "", en: "" },
       student: { zh: "", en: "" },
@@ -131,7 +308,7 @@
       document.getElementById("detail-title").innerText = zh ? zhTitle : enTitle;
       document.getElementById("detail-title").setAttribute("data-zh", zhTitle);
       document.getElementById("detail-title").setAttribute("data-en", enTitle);
-      document.getElementById("detail-desc").innerText = zh ? d.zh : d.en;
+      document.getElementById("detail-desc").innerHTML = zh ? d.zh : d.en;
       document.getElementById("detail-desc").setAttribute("data-zh", d.zh);
       document.getElementById("detail-desc").setAttribute("data-en", d.en);
     }
